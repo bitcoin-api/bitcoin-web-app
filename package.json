@@ -1,0 +1,34 @@
+{
+  "name": "bitcoin-web-app",
+  "version": "1.0.0",
+  "description": "A Bitcoin Web App by Bitcoin-Api.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitcoin-api/bitcoin-web-app.git"
+  },
+  "keywords": [
+    "bitcoin",
+    "api",
+    "web",
+    "app",
+    "crypto",
+    "simple",
+    "light",
+    "small",
+    "easy",
+    "fast",
+    "quick",
+    "beginner",
+    "advanced"
+  ],
+  "author": "Michael Stecky-Efantis",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/bitcoin-api/bitcoin-web-app/issues"
+  },
+  "homepage": "https://github.com/bitcoin-api/bitcoin-web-app#readme"
+}
