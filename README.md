@@ -1,10 +1,37 @@
 # bitcoin-web-app
 
+#### A Bitcoin Web App by [Bitcoin-Api.io](https://bitcoin-api.io)
 
-A Bitcoin Web App by Bitcoin-Api.io - coming soon!
+[![npm version](https://badge.fury.io/js/bitcoin-web-app.svg)](https://badge.fury.io/js/bitcoin-web-app)
 
 
-It will be the web version of the NPM bitcoin app component module [bitcoin-app](https://www.npmjs.com/package/bitcoin-app).
+## About
+A [ReactJS](https://reactjs.org) bitcoin web app plugin component for effortlessly 
+incorporating bitcoin functionality into your React web apps.
+
+
+## Table of Contents
+* [Install](#install)
+* [Setup](#setup)
+
+
+## Install (NOTE: PREVIEW ONLY)
+
+With "bitcoin-web-app", all that's needed is to first install the NPM module:
+```
+npm install bitcoin-web-app --save
+```
+This needs to be done in the React app folder.
+
+## Setup
+
+Coming Soon. Thank you for your patience.
+
+
+
+---
+
+This is an open-source project - open to PRs, suggestions, Github Issues, comments, complaints and compliments.😁
 
 
 #### Technical Support 
