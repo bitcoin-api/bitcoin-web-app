@@ -16,7 +16,6 @@ const App = () => {
 };
 
 
-
 ReactDOM.render(
     e( App ),
     document.getElementById( 'app' )
