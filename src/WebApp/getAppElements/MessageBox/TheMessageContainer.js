@@ -1,20 +1,15 @@
 import { createElement as e } from 'react';
 import {
-    StyleSheet,
-    View,
-    Text,
-} from 'react-native';
-import {
     colours,
     fonts
     // mainStyles,
     // mainStyleToMainStyleObject
-} from '../../../constants';
-import { getState } from '../../../reduxX';
+} from '../../constants';
+import { getState } from '../../reduxX';
 // import { getState, setState } from '../../../reduxX';
 
 
-const styles = StyleSheet.create({
+const styles = {
     outerContainer: {
         backgroundColor: colours.apiRoyalBlue,
         // width: '100%',
@@ -36,7 +31,7 @@ const styles = StyleSheet.create({
         padding: 20,
         textAlign: 'left'
     }
-});
+};
 
 
 export default () => {
@@ -44,12 +39,12 @@ export default () => {
     const theMessage = getState( 'messageBox', 'theMessage' );
 
     return e(
-        View,
+        'div',
         {
             style: styles.outerContainer,
         },
         e(
-            Text,
+            'div',
             {
                 style: styles.message,
             },

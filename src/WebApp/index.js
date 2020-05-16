@@ -1,5 +1,5 @@
 import { createElement as e, useState } from 'react';
-// import getAppElements from './getAppElements';
+import getAppElements from './getAppElements';
 // import { colours } from './constants';
 import { getState, setUpReduxX } from './reduxX';
 
@@ -37,6 +37,6 @@ export default () => {
         {
             style: styles.outerContainer,
         },
-        // ...getAppElements()
+        ...getAppElements()
     );
 };

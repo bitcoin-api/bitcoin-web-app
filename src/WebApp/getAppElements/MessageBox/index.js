@@ -1,22 +1,17 @@
 import { createElement as e } from 'react';
 import {
-    View,
-    StyleSheet,
-    // TouchableOpacity,
-} from 'react-native';
-import {
     
     colours,
     // mainStyles,
     // mainStyleToMainStyleObject
 
-} from '../../../constants';
+} from '../../constants';
 // import { getState, setState } from '../../../reduxX';
 import ChangeMainStyleButton from './ChangeMainStyleButton';
 import TheMessageContainer from './TheMessageContainer';
 
 
-const styles = StyleSheet.create({
+const styles = {
     outerContainer: {
         backgroundColor: colours.apiRoyalBlue,
         // backgroundColor: 'pink',
@@ -29,13 +24,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'flex-start'
     },
-});
+};
 
 
 export default () => {
   
     return e(
-        View,
+        'div',
         {
             style: styles.outerContainer,
         },

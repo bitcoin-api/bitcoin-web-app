@@ -17,3 +17,5 @@ npm-debug.log
 tests
 .env-template
 .jshintrc
+dist
+.cache

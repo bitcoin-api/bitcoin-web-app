@@ -1,21 +1,19 @@
 import { createElement as e } from 'react';
-import {
-    StyleSheet,
-    View,
-    Text
-} from 'react-native';
-import { fonts } from '../../constants';
-import { getState } from '../../reduxX';
+import { fonts } from '../constants';
+import { getState } from '../reduxX';
 
 
 const getStyles = () => {
     
-    const mainStyleObject = getState( 'mainStyleObject' );
+    const {
 
-    return StyleSheet.create({
+        color
+
+    } = getState( 'mainStyleObject' );
+
+    return {
 
         outerContainer: {
-            // backgroundColor: 'pink',
     
             display: 'flex',
             flexDirection: 'column',
@@ -28,34 +26,11 @@ const getStyles = () => {
     
             marginTop: 90,
             fontSize: 20,
-            color: mainStyleObject.color,
+            color,
             fontFamily: fonts.standard.bold,
         }
-    });
+    };
 };
-
-
-
-
-// const styles = StyleSheet.create({
-//     outerContainer: {
-//         // backgroundColor: 'pink',
-
-//         display: 'flex',
-//         flexDirection: 'column',
-//         alignItems: 'center',
-//         justifyContent: 'flex-start',
-//         flex: 0.2,
-//     },
-
-//     titleText: {
-
-//         marginTop: 90,
-//         fontSize: 20,
-//         color: colours.black,
-//         fontFamily: fonts.standard.bold,
-//     }
-// });
 
 
 export default () => {
@@ -63,12 +38,12 @@ export default () => {
     const styles = getStyles();
 
     return e(
-        View,
+        'div',
         {
             style: styles.outerContainer,
         },
         e(
-            Text,
+            'div',
             {
                 style: styles.titleText
             },
