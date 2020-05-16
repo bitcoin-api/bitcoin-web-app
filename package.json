@@ -33,7 +33,6 @@
   "homepage": "https://github.com/bitcoin-api/bitcoin-web-app#readme",
   "dependencies": {
     "bitcoin-api": "^3.6.17",
-    "react-native": "^0.62.2",
     "react-state-management": "^1.0.3"
   },
   "devDependencies": {
