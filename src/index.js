@@ -1,17 +1,28 @@
 import { createElement as e } from 'react';
 import ReactDOM from 'react-dom';
+import WebApp from './WebApp';
+
+const styles = {
+
+    body: {
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+};
 
 
 const App = () => {
 
-    const name = `React Test Name ${ Date.now() % 600 }`;
-
     return e(
-        'h1',
+        'div',
         {
-
+            style: styles.body,
         },
-        `Hello ${ name } World🌎!`
+        e( WebApp ),
     );
 };
 
