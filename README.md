@@ -11,17 +11,8 @@ incorporating bitcoin functionality into your React web apps.
 
 
 ## Table of Contents
-* [Install](#install)
 * [Screenshots](#screenshots)
 
-
-## Install
-
-With "bitcoin-web-app", all that's needed is to first install the NPM module:
-```
-npm install bitcoin-web-app --save
-```
-This needs to be done in the React app folder.
 
 ## Screenshots
 
