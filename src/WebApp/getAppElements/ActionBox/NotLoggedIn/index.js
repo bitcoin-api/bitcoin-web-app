@@ -1,6 +1,6 @@
 import { createElement as e } from 'react';
 import createNewToken from './createNewToken';
-// import getPastedTokenData from './getPastedTokenData';
+import getPastedTokenData from './getPastedTokenData';
 import { getState, setState } from '../../../reduxX';
 import { fonts } from '../../../constants';
 import { messageBoxCommon, browser } from '../../../utils';
@@ -113,7 +113,6 @@ export default () => {
         e(
             'div',
             {
-                // title: 'Create Token',
                 style: styles.button,
                 onClick: async () => {
 
@@ -139,28 +138,28 @@ export default () => {
                 },
                 'Copy Token in Storage'
             )
+        ),
+        e(
+            'div',
+            {
+                // title: 'Paste Token',
+                style: styles.button,
+                // color: '#f194ff',
+                onClick: async () => {
+
+                    // await updateTokenInfoAppData({
+
+                    //     getTokenDataFunction: getPastedTokenData,
+                    // });
+                }
+            },
+            e(
+                'div',
+                {
+                    style: styles.buttonText,
+                },
+                'Paste Token from Clipboard'
+            )
         )
-        // e(
-        //     'div',
-        //     {
-        //         // title: 'Paste Token',
-        //         style: styles.button,
-        //         // color: '#f194ff',
-        //         onClick: async () => {
-
-        //             await updateTokenInfoAppData({
-
-        //                 getTokenDataFunction: getPastedTokenData,
-        //             });
-        //         }
-        //     },
-        //     e(
-        //         'div',
-        //         {
-        //             style: styles.buttonText,
-        //         },
-        //         'Paste Token from Clipboard'
-        //     )
-        // )
     );
 };

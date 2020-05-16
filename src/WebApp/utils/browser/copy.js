@@ -12,10 +12,11 @@ export default ({
     appElement.appendChild( inputElement );
 
     const gottenInputElement = document.getElementById( 'copyTextInput' );
-
     gottenInputElement.value = message;
     gottenInputElement.select();
-    gottenInputElement.setSelectionRange(0, 99999); /*For mobile devices*/
+    gottenInputElement.setSelectionRange( 0, 99999 ); /*For mobile devices*/
     document.execCommand( 'copy' );
+    appElement.removeChild( gottenInputElement );
+
     alert( gottenInputElement.value );
 };
