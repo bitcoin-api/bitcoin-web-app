@@ -1,5 +1,5 @@
 import { useEffect, createElement as e } from 'react';
-// import NotLoggedIn from './NotLoggedIn';
+import NotLoggedIn from './NotLoggedIn';
 // import LoggedIn from './LoggedIn';
 import { getState } from '../../reduxX';
 // import componentDidMount from './componentDidMount';
@@ -38,8 +38,7 @@ export default () => {
     // );
 
     const mainElement = e(
-        'div'
-        // NotLoggedIn
+        NotLoggedIn
     );
     
     return e(

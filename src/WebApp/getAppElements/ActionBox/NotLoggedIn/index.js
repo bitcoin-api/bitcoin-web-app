@@ -1,9 +1,9 @@
 import { createElement as e } from 'react';
 import createNewToken from './createNewToken';
-import getPastedTokenData from './getPastedTokenData';
+// import getPastedTokenData from './getPastedTokenData';
 import { getState, setState } from '../../../reduxX';
 import { fonts } from '../../../constants';
-import { messageBoxCommon } from '../../../utils';
+import { messageBoxCommon, browser } from '../../../utils';
 
 
 const getStyles = () => {
@@ -94,12 +94,12 @@ export default () => {
             {
                 // title: 'Create Token',
                 style: styles.button,
-                onPress: async () => {
+                onClick: async () => {
 
-                    await updateTokenInfoAppData({
+                    // await updateTokenInfoAppData({
 
-                        getTokenDataFunction: createNewToken,
-                    });
+                    //     getTokenDataFunction: createNewToken,
+                    // });
                 }
             },
             e(
@@ -121,7 +121,7 @@ export default () => {
 
                         const token = localStorage.getItem( 'token' );
 
-                        // Clipboard.setString( token );
+                        browser.copy({ message: token });
                     }
                     catch( err ) {
 
@@ -139,28 +139,28 @@ export default () => {
                 },
                 'Copy Token in Storage'
             )
-        ),
-        e(
-            'div',
-            {
-                // title: 'Paste Token',
-                style: styles.button,
-                // color: '#f194ff',
-                onClick: async () => {
-
-                    await updateTokenInfoAppData({
-
-                        getTokenDataFunction: getPastedTokenData,
-                    });
-                }
-            },
-            e(
-                'div',
-                {
-                    style: styles.buttonText,
-                },
-                'Paste Token from Clipboard'
-            )
         )
+        // e(
+        //     'div',
+        //     {
+        //         // title: 'Paste Token',
+        //         style: styles.button,
+        //         // color: '#f194ff',
+        //         onClick: async () => {
+
+        //             await updateTokenInfoAppData({
+
+        //                 getTokenDataFunction: getPastedTokenData,
+        //             });
+        //         }
+        //     },
+        //     e(
+        //         'div',
+        //         {
+        //             style: styles.buttonText,
+        //         },
+        //         'Paste Token from Clipboard'
+        //     )
+        // )
     );
 };
