@@ -22,7 +22,7 @@ const App = () => {
         {
             style: styles.body,
         },
-        e( WebApp ),
+        e( WebApp )
     );
 };
 
