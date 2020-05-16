@@ -1,5 +1,5 @@
 import BitcoinApi from 'bitcoin-api';
-import { tokens } from '../../../../utils';
+import { tokens } from '../../../utils';
 
 const safeGetToken = async () => {
 

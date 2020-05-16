@@ -19,7 +19,8 @@ const getStyles = () => {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'flex-start',
-            flex: 0.2,
+            // flex: 0.2,
+            height: '20%',
         },
     
         titleText: {

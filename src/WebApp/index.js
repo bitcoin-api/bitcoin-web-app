@@ -18,7 +18,6 @@ const getStyles = () => {
             flexDirection: 'column',
             // justifyContent: 'space-between',
             // alignItems: 'center',
-            flex: 1,
             justifyContent: 'space-between',
             alignItems: 'center',
         },

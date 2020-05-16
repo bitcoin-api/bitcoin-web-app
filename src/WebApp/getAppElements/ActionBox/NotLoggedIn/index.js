@@ -1,24 +1,17 @@
 import { createElement as e } from 'react';
-import {
-    StyleSheet,
-    View,
-    Text,
-    TouchableOpacity
-} from 'react-native';
 import createNewToken from './createNewToken';
 import getPastedTokenData from './getPastedTokenData';
-import AsyncStorage from '@react-native-community/async-storage';
-import Clipboard from '@react-native-community/clipboard';
-import { getState, setState } from '../../../../reduxX';
-import { fonts } from '../../../../constants';
-import { messageBoxCommon } from '../../../../utils';
+import { getState, setState } from '../../../reduxX';
+import { fonts } from '../../../constants';
+import { messageBoxCommon } from '../../../utils';
 
 
 const getStyles = () => {
 
     const mainStyleObject = getState( 'mainStyleObject' );
     
-    return StyleSheet.create({
+    return {
+        
         outerContainer: {
             // backgroundColor: 'red',
             width: '100%',
@@ -49,7 +42,7 @@ const getStyles = () => {
             color: mainStyleObject.color,
             fontFamily: fonts.standard.regular
         }
-    });
+    };
 };
 
 
@@ -69,7 +62,8 @@ const updateTokenInfoAppData = async ({
         } = await getTokenDataFunction();
 
         setState( [ 'auth', 'tokenInfo' ], tokenInfo );
-        await AsyncStorage.setItem( 'token', token );
+        // await AsyncStorage.setItem( 'token', token );
+        localStorage.setItem( 'token', token );
     }
     catch( err ) {
 
@@ -81,7 +75,7 @@ const updateTokenInfoAppData = async ({
         console.log( 'error in updateTokenInfoAppData:', err );
 
         setState( [ 'auth', 'tokenInfo' ], null );
-        await AsyncStorage.removeItem( 'token' );
+        localStorage.removeItem( 'token' );
     }
 };
 
@@ -91,12 +85,12 @@ export default () => {
     const styles = getStyles();
 
     return e(
-        View,
+        'div',
         {
             style: styles.outerContainer,
         },
         e(
-            TouchableOpacity,
+            'div',
             {
                 // title: 'Create Token',
                 style: styles.button,
@@ -109,7 +103,7 @@ export default () => {
                 }
             },
             e(
-                Text,
+                'div',
                 {
                     style: styles.buttonText,
                 },
@@ -117,17 +111,17 @@ export default () => {
             )
         ),
         e(
-            TouchableOpacity,
+            'div',
             {
                 // title: 'Create Token',
                 style: styles.button,
-                onPress: async () => {
+                onClick: async () => {
 
                     try {
 
-                        const token = await AsyncStorage.getItem( 'token' );
+                        const token = localStorage.getItem( 'token' );
 
-                        Clipboard.setString( token );
+                        // Clipboard.setString( token );
                     }
                     catch( err ) {
 
@@ -139,7 +133,7 @@ export default () => {
                 }
             },
             e(
-                Text,
+                'div',
                 {
                     style: styles.buttonText,
                 },
@@ -147,12 +141,12 @@ export default () => {
             )
         ),
         e(
-            TouchableOpacity,
+            'div',
             {
                 // title: 'Paste Token',
                 style: styles.button,
                 // color: '#f194ff',
-                onPress: async () => {
+                onClick: async () => {
 
                     await updateTokenInfoAppData({
 
@@ -161,7 +155,7 @@ export default () => {
                 }
             },
             e(
-                Text,
+                'div',
                 {
                     style: styles.buttonText,
                 },

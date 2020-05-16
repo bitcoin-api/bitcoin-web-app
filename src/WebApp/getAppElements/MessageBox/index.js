@@ -17,7 +17,8 @@ const styles = {
         // backgroundColor: 'pink',
         width: '100%',
 
-        flex: 0.1,
+        // flex: 0.1,
+        height: '10%',
 
         display: 'flex',
         flexDirection: 'row',
