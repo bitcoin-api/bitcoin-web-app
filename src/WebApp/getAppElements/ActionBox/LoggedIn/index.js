@@ -1,9 +1,9 @@
 import { createElement as e } from 'react';
 import BalanceDisplay from './BalanceDisplay';
-// import ViewAddressButton from './ViewAddressButton';
-// import WithdrawButton from './WithdrawButton';
-// import WithdrawZone from './WithdrawZone';
-// import ViewAddressZone from './ViewAddressZone';
+import ViewAddressButton from './ViewAddressButton';
+import WithdrawButton from './WithdrawButton';
+import WithdrawZone from './WithdrawZone';
+import ViewAddressZone from './ViewAddressZone';
 import VerifySection from './VerifySection';
 import EjectAndCopyToken from './EjectAndCopyToken';
 import { getState } from '../../../reduxX';
@@ -33,17 +33,17 @@ export default () => {
 
     if( actionBoxMode === actionBoxModes.viewAddress ) {
 
-        // components.push( 
+        components.push( 
             
-        //     e( ViewAddressZone ),
-        // );
+            e( ViewAddressZone )
+        );
     }
     else if( actionBoxMode === actionBoxModes.withdraw ) {
 
-        // components.push( 
+        components.push( 
             
-        //     e( WithdrawZone ),
-        // );
+            e( WithdrawZone ),
+        );
     }
     else {
 
@@ -54,11 +54,11 @@ export default () => {
 
         if( tokenInfo.isActivated ) {
 
-            // components.push( 
+            components.push( 
             
-            //     e( ViewAddressButton ),
-            //     e( WithdrawButton )
-            // );
+                e( ViewAddressButton ),
+                e( WithdrawButton )
+            );
         }
         else {
 

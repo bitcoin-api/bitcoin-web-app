@@ -1,15 +1,7 @@
 import { createElement as e } from 'react';
-import {
-    StyleSheet,
-    // TouchableOpacity,
-    View,
-    Text,
-    TouchableOpacity
-} from 'react-native';
-import { getState, setState } from '../../../../../reduxX';
-import { fonts } from '../../../../../constants';
+import { getState, setState } from '../../../../reduxX';
+import { fonts } from '../../../../constants';
 import WithdrawBox from './WithdrawBox';
-// import componentDidMount from './componentDidMount';
 
 
 const getStyles = () => {
@@ -21,7 +13,7 @@ const getStyles = () => {
 
     } = getState( 'mainStyleObject' );
     
-    return StyleSheet.create({
+    return {
         outerContainer: {
             // backgroundColor: 'indigo',
             height: '100%',
@@ -55,7 +47,7 @@ const getStyles = () => {
             color,
             fontFamily: fonts.standard.regular,
         },
-    });
+    };
 };
 
 
@@ -68,22 +60,22 @@ export default () => {
     const styles = getStyles();
 
     return e(
-        View,
+        'div',
         {
             style: styles.outerContainer,
         },
         e( WithdrawBox ),
         e(
-            TouchableOpacity,
+            'div',
             {
                 style: styles.backButton,
-                onPress: () => {
+                onClick: () => {
 
                     setState( [ 'actionBox', 'mode' ], null );
                 }
             },
             e(
-                Text,
+                'div',
                 {
                     style: styles.backButtonText,
                 },

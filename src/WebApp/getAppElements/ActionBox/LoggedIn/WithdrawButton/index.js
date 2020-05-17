@@ -1,13 +1,7 @@
 import { createElement as e } from 'react';
-import { setState } from '../../../../../reduxX';
-import { actionBoxModes } from '../../../../../constants';
+import { setState } from '../../../../reduxX';
+import { actionBoxModes } from '../../../../constants';
 import MegaButton from '../MegaButton';
-// import {
-//     StyleSheet,
-//     TouchableOpacity,
-//     // View,
-//     Text
-// } from 'react-native';
 
 
 export default () => {
@@ -15,7 +9,7 @@ export default () => {
     return e(
         MegaButton,
         {
-            onPress: () => {
+            onClick: () => {
 
                 setState(
 

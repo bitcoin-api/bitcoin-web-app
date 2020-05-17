@@ -1,13 +1,7 @@
 import { createElement as e } from 'react';
-import {
-    StyleSheet,
-    // TouchableOpacity,
-    View,
-    TextInput
-} from 'react-native';
-import { getState, setState } from '../../../../../../reduxX';
-import { fonts, colours } from '../../../../../../constants';
-// import componentDidMount from './componentDidMount';
+import { getState, setState } from '../../../../../reduxX';
+import { fonts } from '../../../../../constants';
+
 
 const getStyles = () => {
 
@@ -20,7 +14,7 @@ const getStyles = () => {
 
     } = getState( 'mainStyleObject' );
     
-    return StyleSheet.create({
+    return {
         outerContainer: {
             // backgroundColor: 'indigo',
             width: '100%',
@@ -34,7 +28,7 @@ const getStyles = () => {
 
         theText: {
     
-            // backgroundColor: alternateBackgroundColor,
+            backgroundColor: alternateBackgroundColor,
             color: alternateColor,
             // flex: 0.7,
             fontSize: 20,
@@ -52,7 +46,7 @@ const getStyles = () => {
             alignItems: 'center',
             justifyContent: 'center'
         },
-    });
+    };
 };
 
 
@@ -65,16 +59,17 @@ export default () => {
     const styles = getStyles();
 
     return e(
-        View,
+        'div',
         {
             style: styles.outerContainer,
         },
         e( 
-            TextInput,
+            'input',
             {
                 placeholder: 'address',
-                placeholderTextColor: colours.bitcoin.darkGrey,
-                onChangeText: text => {
+                onChange: event => {
+
+                    const text = event.target.value;
 
                     if( text.length > 50 ) {
 

@@ -1,6 +1,6 @@
 import { createElement as e } from 'react';
-import { setState } from '../../../../../reduxX';
-import { actionBoxModes } from '../../../../../constants';
+import { setState } from '../../../../reduxX';
+import { actionBoxModes } from '../../../../constants';
 import MegaButton from '../MegaButton';
 // import {
 //     StyleSheet,
@@ -15,7 +15,7 @@ export default () => {
     return e(
         MegaButton,
         {
-            onPress: () => {
+            onClick: () => {
 
                 setState(
 

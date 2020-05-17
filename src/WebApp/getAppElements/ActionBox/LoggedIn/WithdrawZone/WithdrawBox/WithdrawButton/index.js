@@ -1,11 +1,6 @@
 import { createElement as e } from 'react';
-import {
-    StyleSheet,
-    TouchableOpacity,
-    Text,
-} from 'react-native';
-import { getState } from '../../../../../../../reduxX';
-import { fonts } from '../../../../../../../constants';
+import { getState } from '../../../../../../reduxX';
+import { fonts } from '../../../../../../constants';
 import withdrawBitcoin from './withdrawBitcoin';
 // import componentDidMount from './componentDidMount';
 
@@ -20,7 +15,7 @@ const getStyles = () => {
 
     } = getState( 'mainStyleObject' );
     
-    return StyleSheet.create({
+    return {
         outerContainer: {
             // backgroundColor: 'indigo',
             width: '100%',
@@ -39,7 +34,7 @@ const getStyles = () => {
             padding: 15,
             fontFamily: fonts.standard.regular,
         },
-    });
+    };
 };
 
 
@@ -48,13 +43,13 @@ export default () => {
     const styles = getStyles();
 
     return e(
-        TouchableOpacity,
+        'div',
         {
             style: styles.outerContainer,
-            onPress: withdrawBitcoin,
+            onClick: withdrawBitcoin,
         },
         e(
-            Text,
+            'div',
             {
                 style: styles.theText,
             },

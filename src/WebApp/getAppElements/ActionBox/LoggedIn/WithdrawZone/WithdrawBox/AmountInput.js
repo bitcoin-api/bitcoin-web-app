@@ -1,14 +1,7 @@
 import { createElement as e } from 'react';
-import {
-    StyleSheet,
-    // TouchableOpacity,
-    View,
-    Text,
-    TextInput
-} from 'react-native';
-import { getState, setState } from '../../../../../../reduxX';
-import { fonts } from '../../../../../../constants';
-// import componentDidMount from './componentDidMount';
+import { getState, setState } from '../../../../../reduxX';
+import { fonts } from '../../../../../constants';
+
 
 const getStyles = () => {
 
@@ -20,7 +13,7 @@ const getStyles = () => {
 
     } = getState( 'mainStyleObject' );
     
-    return StyleSheet.create({
+    return {
         outerContainer: {
             // backgroundColor: 'indigo',
             width: '100%',
@@ -34,7 +27,7 @@ const getStyles = () => {
 
         theText: {
     
-            // backgroundColor: alternateBackgroundColor,
+            backgroundColor: alternateBackgroundColor,
             color: alternateColor,
             // flex: 0.7,
             fontSize: 20,
@@ -52,7 +45,7 @@ const getStyles = () => {
             alignItems: 'center',
             justifyContent: 'center'
         },
-    });
+    };
 };
 
 
@@ -67,14 +60,16 @@ export default () => {
     const amountDisplay = String( amount );
 
     return e(
-        View,
+        'div',
         {
             style: styles.outerContainer,
         },
         e( 
-            TextInput,
+            'input',
             {
-                onChangeText: text => {
+                onChange: event => {
+                    
+                    const text = event.target.value;
 
                     const textAsNumber = Number( text );
 
@@ -104,18 +99,18 @@ export default () => {
                 
                     setState( [ 'withdrawZone', 'amount' ], text );
                 },
-                keyboardType: 'numeric', 
+                // keyboardType: 'numeric', 
                 value: amountDisplay,
                 style: styles.theText,
             }
         ),
         e(
-            View,
+            'div',
             {
                 style: styles.btcTextContainer,
             },
             e(
-                Text,
+                'div',
                 {
                     style: styles.theText,
                 },

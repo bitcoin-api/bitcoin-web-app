@@ -1,12 +1,5 @@
-import { useEffect, createElement as e } from 'react';
-import {
-    StyleSheet,
-    // TouchableOpacity,
-    View,
-    Text,
-    TextInput
-} from 'react-native';
-import { getState, setState } from '../../../../../../reduxX';
+import { createElement as e } from 'react';
+import { getState } from '../../../../../reduxX';
 // import { fonts } from '../../../../../../constants';
 import AmountInput from './AmountInput';
 import AddressInput from './AddressInput';
@@ -25,11 +18,9 @@ const getStyles = () => {
 
     } = getState( 'mainStyleObject' );
     
-    return StyleSheet.create({
+    return {
         outerContainer: {
             // backgroundColor: 'indigo',
-            width: '100%',
-
             backgroundColor,
 
             width: '90%',
@@ -40,7 +31,7 @@ const getStyles = () => {
             alignItems: 'center',
             justifyContent: 'space-between'
         },
-    });
+    };
 };
 
 
@@ -49,7 +40,7 @@ export default () => {
     const styles = getStyles();
 
     return e(
-        View,
+        'div',
         {
             style: styles.outerContainer,
             // style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}

@@ -19,7 +19,7 @@ const getStyles = () => {
             width: '100%',
 
             display: 'flex',
-            flexDirection: 'column',
+            flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'space-around'
         },
@@ -29,7 +29,7 @@ const getStyles = () => {
             textAlign: 'left',
             fontFamily: fonts.standard.regular,
             fontSize: 20,
-            paddingLeft: 30,
+            marginLeft: 30,
             color,
         },
     };

@@ -1,22 +1,19 @@
 import { useEffect, createElement as e } from 'react';
-import {
-    StyleSheet,
-    // TouchableOpacity,
-    View,
-    Image,
-    Text,
-    TouchableOpacity
-} from 'react-native';
-import { getState, setState } from '../../../../../reduxX';
-import { fonts } from '../../../../../constants';
+import { getState, setState } from '../../../../reduxX';
+import { fonts } from '../../../../constants';
 import componentDidMount from './componentDidMount';
 
 
 const getStyles = () => {
 
-    const mainStyleObject = getState( 'mainStyleObject' );
+    const {
+
+        backgroundColor,
+        color,
+        
+    } = getState( 'mainStyleObject' );
     
-    return StyleSheet.create({
+    return {
         outerContainer: {
             // backgroundColor: 'indigo',
             height: '100%',
@@ -30,15 +27,15 @@ const getStyles = () => {
 
         qrCode: {
 
-            width: '60%',
-            height: '60%',
-            backgroundColor: mainStyleObject.backgroundColor,
+            width: 300,
+            height: 300,
+            backgroundColor,
         },
 
         backButton: {
 
             width: '100%',
-            backgroundColor: mainStyleObject.backgroundColor,
+            backgroundColor,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -52,10 +49,10 @@ const getStyles = () => {
             paddingTop: 13,
             paddingBottom: 13,
             textAlign: 'center',
-            color: mainStyleObject.color,
+            color,
             fontFamily: fonts.standard.regular,
         },
-    });
+    };
 };
 
 const getQrCodeUrl = ({ address }) => (
@@ -73,45 +70,42 @@ export default () => {
     const styles = getStyles();
 
     return e(
-        View,
+        'div',
         {
             style: styles.outerContainer,
         },
         !!addressData ? e(
 
-            Image,
+            'img',
             {
                 width: styles.qrCode.width,
                 height: styles.qrCode.height,
-                source: {
-                    
-                    uri: getQrCodeUrl({
+                src: getQrCodeUrl({
 
-                        address: addressData.address,
-                    }),
-                },
+                    address: addressData.address,
+                }),
                 // src: `https://api-abi`
                 style: styles.qrCode,
             }
 
         ) : e(
 
-            View,
+            'div',
             {
                 style: styles.qrCode,
             }
         ),
         e(
-            TouchableOpacity,
+            'div',
             {
                 style: styles.backButton,
-                onPress: () => {
+                onClick: () => {
 
                     setState( [ 'actionBox', 'mode' ], null );
                 }
             },
             e(
-                Text,
+                'div',
                 {
                     style: styles.backButtonText,
                 },

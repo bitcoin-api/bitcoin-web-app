@@ -1,12 +1,4 @@
-import { getState, setState } from '../../../../../reduxX';
-// import { createElement as e } from 'react';
-// import {
-//     StyleSheet,
-//     TouchableOpacity,
-//     View,
-//     Text
-// } from 'react-native';
-// // import { actionBoxModes } from '../../../constants';
+import { getState, setState } from '../../../../reduxX';
 
 
 export default () => {

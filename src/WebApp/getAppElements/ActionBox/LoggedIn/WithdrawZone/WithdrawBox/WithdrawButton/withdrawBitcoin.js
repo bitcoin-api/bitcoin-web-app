@@ -1,4 +1,4 @@
-import { getState, resetReduxX } from '../../../../../../../reduxX';
+import { getState, resetReduxX } from '../../../../../../reduxX';
 
 
 export default async () => {
