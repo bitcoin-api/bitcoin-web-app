@@ -1,19 +1,19 @@
 import { createElement as e } from 'react';
-import {
-    StyleSheet,
-    View,
-    Text
-} from 'react-native';
-import { getState } from '../../../../../reduxX';
-import { fonts } from '../../../../../constants';
+import { getState } from '../../../../reduxX';
+import { fonts } from '../../../../constants';
 
 const getStyles = () => {
 
-    const mainStyleObject = getState( 'mainStyleObject' );
+    const {
+        
+        backgroundColor,
+        color,
+
+    } = getState( 'mainStyleObject' );
     
-    return StyleSheet.create({
+    return {
         outerContainer: {
-            backgroundColor: mainStyleObject.backgroundColor,
+            backgroundColor,
             flex: 0.2,
             width: '100%',
 
@@ -28,10 +28,10 @@ const getStyles = () => {
             textAlign: 'left',
             fontSize: 20,
             paddingLeft: 30,
-            color: mainStyleObject.color,
+            color,
             fontFamily: fonts.standard.regular,
         },
-    });
+    };
 };
 
 export default () => {
@@ -41,23 +41,16 @@ export default () => {
     const styles = getStyles();
 
     return e(
-        View,
+        'div',
         {
             style: styles.outerContainer,
         },
         e(
-            Text,
+            'div',
             {
                 style: styles.text,
             },
             `Balance: ${ tokenInfo.balanceData.amount } BTC`
-        )//,
-        // e(
-        //     Text,
-        //     {
-        //         style: styles.text,
-        //     },
-        //     `Balance Status: ${ tokenInfo.balanceData.status }`
-        // )
+        )
     );
 };

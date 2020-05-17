@@ -1,10 +1,10 @@
 import { createElement as e } from 'react';
-// import BalanceDisplay from './BalanceDisplay';
+import BalanceDisplay from './BalanceDisplay';
 // import ViewAddressButton from './ViewAddressButton';
 // import WithdrawButton from './WithdrawButton';
 // import WithdrawZone from './WithdrawZone';
 // import ViewAddressZone from './ViewAddressZone';
-// import VerifySection from './VerifySection';
+import VerifySection from './VerifySection';
 import EjectAndCopyToken from './EjectAndCopyToken';
 import { getState } from '../../../reduxX';
 import { actionBoxModes } from '../../../constants';
@@ -47,26 +47,26 @@ export default () => {
     }
     else {
 
-        // components.push( 
+        components.push( 
             
-        //     e( BalanceDisplay )
-        // );
+            e( BalanceDisplay )
+        );
 
-        // if( tokenInfo.isActivated ) {
+        if( tokenInfo.isActivated ) {
 
-        //     components.push( 
+            // components.push( 
             
-        //         e( ViewAddressButton ),
-        //         e( WithdrawButton )
-        //     );
-        // }
-        // else {
+            //     e( ViewAddressButton ),
+            //     e( WithdrawButton )
+            // );
+        }
+        else {
 
-        //     components.push(
+            components.push(
 
-        //         e( VerifySection )
-        //     );
-        // }
+                e( VerifySection )
+            );
+        }
 
         components.push(
 

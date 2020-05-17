@@ -125,7 +125,7 @@ export default () => {
 
                         const token = localStorage.getItem( 'token' );
 
-                        browser.copy({ message: token });
+                        await browser.copy({ message: token });
                     }
                     catch( err ) {
 

@@ -10,11 +10,11 @@ export default () => {
         MegaButton,
         {
             buttonText: 'Copy and Eject Token',
-            onClick: () => {
+            onClick: async () => {
 
                 const token = localStorage.getItem( 'token' );
 
-                browser.copy({ message: token });
+                await browser.copy({ message: token });
 
                 resetReduxX({
                     listOfKeysToInclude: [
