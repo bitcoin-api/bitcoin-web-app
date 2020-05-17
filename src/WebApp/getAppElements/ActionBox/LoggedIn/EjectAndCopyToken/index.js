@@ -1,8 +1,7 @@
-import AsyncStorage from '@react-native-community/async-storage';
-import Clipboard from '@react-native-community/clipboard';
 import { createElement as e } from 'react';
-import { resetReduxX } from '../../../../../reduxX';
+import { resetReduxX } from '../../../../reduxX';
 import MegaButton from '../MegaButton';
+import { browser } from '../../../../utils';
 
 
 export default () => {
@@ -11,11 +10,11 @@ export default () => {
         MegaButton,
         {
             buttonText: 'Copy and Eject Token',
-            onPress: async () => {
+            onClick: () => {
 
-                const string = await AsyncStorage.getItem( 'token' );
+                const token = localStorage.getItem( 'token' );
 
-                Clipboard.setString( string );
+                browser.copy({ message: token });
 
                 resetReduxX({
                     listOfKeysToInclude: [

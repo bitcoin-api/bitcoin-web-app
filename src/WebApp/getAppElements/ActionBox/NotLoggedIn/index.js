@@ -8,7 +8,12 @@ import { messageBoxCommon, browser } from '../../../utils';
 
 const getStyles = () => {
 
-    const mainStyleObject = getState( 'mainStyleObject' );
+    const {
+        
+        backgroundColor,
+        color,
+
+    } = getState( 'mainStyleObject' );
     
     return {
         
@@ -27,7 +32,7 @@ const getStyles = () => {
 
             width: '85%',
             flex: 0.25,
-            backgroundColor: mainStyleObject.backgroundColor,
+            backgroundColor,
             color: 'white',
             display: 'flex',
             flexDirection: 'column',
@@ -39,7 +44,7 @@ const getStyles = () => {
 
             fontSize: 20,
             textAlign: 'center',
-            color: mainStyleObject.color,
+            color,
             fontFamily: fonts.standard.regular
         }
     };
@@ -96,10 +101,10 @@ export default () => {
                 style: styles.button,
                 onClick: async () => {
 
-                    // await updateTokenInfoAppData({
+                    await updateTokenInfoAppData({
 
-                    //     getTokenDataFunction: createNewToken,
-                    // });
+                        getTokenDataFunction: createNewToken,
+                    });
                 }
             },
             e(
@@ -147,10 +152,10 @@ export default () => {
                 // color: '#f194ff',
                 onClick: async () => {
 
-                    // await updateTokenInfoAppData({
+                    await updateTokenInfoAppData({
 
-                    //     getTokenDataFunction: getPastedTokenData,
-                    // });
+                        getTokenDataFunction: getPastedTokenData,
+                    });
                 }
             },
             e(

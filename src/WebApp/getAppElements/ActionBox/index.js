@@ -1,8 +1,8 @@
 import { useEffect, createElement as e } from 'react';
 import NotLoggedIn from './NotLoggedIn';
-// import LoggedIn from './LoggedIn';
+import componentDidMount from './componentDidMount';
+import LoggedIn from './LoggedIn';
 import { getState } from '../../reduxX';
-// import componentDidMount from './componentDidMount';
 import { colours } from '../../constants';
 
 
@@ -24,23 +24,19 @@ const styles = {
 
 export default () => {
 
-    // useEffect( componentDidMount, [] );
+    useEffect( componentDidMount, [] );
 
     const tokenInfo = getState( 'auth', 'tokenInfo' );
 
-    // const mainElement = !!tokenInfo ? e(
+    const mainElement = !!tokenInfo ? e(
 
-    //     LoggedIn
+        LoggedIn
 
-    // ) : e(
+    ) : e(
         
-    //     NotLoggedIn
-    // );
-
-    const mainElement = e(
         NotLoggedIn
     );
-    
+
     return e(
         'div',
         {

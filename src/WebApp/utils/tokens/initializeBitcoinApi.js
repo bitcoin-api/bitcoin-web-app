@@ -21,6 +21,11 @@ export default async ({
 
     try {
 
+        setMessage({
+
+            message: 'initializing token'
+        });
+
         const bitcoinApi = new BitcoinApi({
         
             testnetToken: token,
@@ -43,6 +48,11 @@ export default async ({
         }
 
         setState( 'bitcoinApi', bitcoinApi );
+
+        setMessage({
+
+            message: 'successfully initialized token'
+        });
 
         return {
             

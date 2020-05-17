@@ -1,20 +1,16 @@
 import { createElement as e } from 'react';
-import {
-    StyleSheet,
-    View,
-} from 'react-native';
-import BalanceDisplay from './BalanceDisplay';
-import ViewAddressButton from './ViewAddressButton';
-import WithdrawButton from './WithdrawButton';
-import WithdrawZone from './WithdrawZone';
-import ViewAddressZone from './ViewAddressZone';
-import VerifySection from './VerifySection';
+// import BalanceDisplay from './BalanceDisplay';
+// import ViewAddressButton from './ViewAddressButton';
+// import WithdrawButton from './WithdrawButton';
+// import WithdrawZone from './WithdrawZone';
+// import ViewAddressZone from './ViewAddressZone';
+// import VerifySection from './VerifySection';
 import EjectAndCopyToken from './EjectAndCopyToken';
-import { getState } from '../../../../reduxX';
-import { actionBoxModes } from '../../../../constants';
+import { getState } from '../../../reduxX';
+import { actionBoxModes } from '../../../constants';
 
 
-const styles = StyleSheet.create({
+const styles = {
     outerContainer: {
         // backgroundColor: colours.bitcoinBlue,
         width: '100%',
@@ -25,7 +21,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-around'
     },
-});
+};
 
 
 export default () => {
@@ -37,40 +33,40 @@ export default () => {
 
     if( actionBoxMode === actionBoxModes.viewAddress ) {
 
-        components.push( 
+        // components.push( 
             
-            e( ViewAddressZone ),
-        );
+        //     e( ViewAddressZone ),
+        // );
     }
     else if( actionBoxMode === actionBoxModes.withdraw ) {
 
-        components.push( 
+        // components.push( 
             
-            e( WithdrawZone ),
-        );
+        //     e( WithdrawZone ),
+        // );
     }
     else {
 
-        components.push( 
+        // components.push( 
             
-            e( BalanceDisplay )
-        );
+        //     e( BalanceDisplay )
+        // );
 
-        if( tokenInfo.isActivated ) {
+        // if( tokenInfo.isActivated ) {
 
-            components.push( 
+        //     components.push( 
             
-                e( ViewAddressButton ),
-                e( WithdrawButton )
-            );
-        }
-        else {
+        //         e( ViewAddressButton ),
+        //         e( WithdrawButton )
+        //     );
+        // }
+        // else {
 
-            components.push(
+        //     components.push(
 
-                e( VerifySection )
-            );
-        }
+        //         e( VerifySection )
+        //     );
+        // }
 
         components.push(
 
@@ -79,7 +75,7 @@ export default () => {
     }
 
     return e(
-        View,
+        'div',
         {
             style: styles.outerContainer,
         },

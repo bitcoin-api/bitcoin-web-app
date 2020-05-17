@@ -17,8 +17,12 @@ incorporating bitcoin functionality into your React web apps.
 ## Screenshots
 
 <p float="left">
-    <img src="https://bitcoin-api.s3.amazonaws.com/images/demo/web-app/web-app_screenshot_3.png" width="170" />
-    <img src="https://bitcoin-api.s3.amazonaws.com/images/demo/web-app/web-app_screenshot_2.png" width="170" />
+    <img src="https://bitcoin-api.s3.amazonaws.com/images/demo/web-app/web-app_screenshot_4.png" width="300" />
+    <img src="https://bitcoin-api.s3.amazonaws.com/images/demo/web-app/web-app_screenshot_5.png" width="300" />
+</p>
+
+<p float="left">
+    <img src="https://bitcoin-api.s3.amazonaws.com/images/demo/web-app/web-app_screenshot_6.png" width="300" />
 </p>
 
 

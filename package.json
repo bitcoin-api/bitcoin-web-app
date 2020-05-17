@@ -32,14 +32,17 @@
   },
   "homepage": "https://github.com/bitcoin-api/bitcoin-web-app#readme",
   "dependencies": {
+    "@react-native-community/async-storage": "^1.10.1",
+    "@react-native-community/clipboard": "^1.2.2",
     "bitcoin-api": "^3.6.17",
+    "react-native": "^0.62.2",
     "react-state-management": "^1.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "react": "^16.11.0",
+    "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
   "peerDependencies": {

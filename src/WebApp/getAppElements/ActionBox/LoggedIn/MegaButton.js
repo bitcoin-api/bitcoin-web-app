@@ -1,12 +1,6 @@
 import { createElement as e } from 'react';
-import {
-    StyleSheet,
-    TouchableOpacity,
-    // View,
-    Text
-} from 'react-native';
-import { getState } from '../../../../reduxX';
-import { fonts } from '../../../../constants';
+import { getState } from '../../../reduxX';
+import { fonts } from '../../../constants';
 
 
 const getStyles = () => {
@@ -18,7 +12,7 @@ const getStyles = () => {
 
     } = getState( 'mainStyleObject' );
     
-    return StyleSheet.create({
+    return {
         outerContainer: {
             backgroundColor,
             flex: 0.2,
@@ -38,13 +32,13 @@ const getStyles = () => {
             paddingLeft: 30,
             color,
         },
-    });
+    };
 };
 
 
 export default ({
 
-    onPress,
+    onClick,
     buttonText,
 
 }) => {
@@ -54,13 +48,13 @@ export default ({
 
     return e(
         // View,
-        TouchableOpacity,
+        'div',
         {
             style: styles.outerContainer,
-            onPress,
+            onClick,
         },
         e(
-            Text,
+            'div',
             {
                 style: styles.text,
             },
