@@ -56,11 +56,6 @@ const App = () => {
     <img src="https://bitcoin-api.s3.amazonaws.com/images/demo/web-app/web-app_screenshot_10.png" width="300" />
 </p>
 
-
-Under construction👷‍♂️🚧🏗, full version coming soon!
-
-Thank you for your patience.👍🖖
-
 ---
 
 This is an open-source project - open to PRs, suggestions, Github Issues, comments, complaints and compliments.😁
