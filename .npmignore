@@ -16,6 +16,9 @@ npm-debug.log
 .env
 tests
 .env-template
+.babelrc
 .jshintrc
+.gitignore
+index.html
 dist
 .cache

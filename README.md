@@ -7,14 +7,39 @@
 
 ## About
 A [ReactJS](https://reactjs.org) bitcoin web app plugin component for effortlessly 
-incorporating bitcoin functionality into your React web apps.
+incorporating bitcoin functionality
+into your React web apps.
 
 
 ## Table of Contents
-* [Screenshots](#screenshots)
+* [Install](#install)
+* [Setup](#setup)
+* [Example](#example)
 
 
-## Screenshots
+## Install
+A [React](https://reactjs.org) bitcoin web app plugin component for effortlessly 
+incorporating bitcoin functionality into your React web apps.
+
+
+## Setup
+Next, import the BitcoinWebApp React component and place it in your existing React App:
+
+```.js
+import BitcoinWebApp from 'bitcoin-web-app';
+
+...
+
+const App = () => {
+    return (
+        <div style={styles.body}>
+            <BitcoinWebApp/>
+        </div>
+    );
+};
+```
+
+## Example
 
 <p float="left">
     <img src="https://bitcoin-api.s3.amazonaws.com/images/demo/web-app/web-app_screenshot_4.png" width="300" />
