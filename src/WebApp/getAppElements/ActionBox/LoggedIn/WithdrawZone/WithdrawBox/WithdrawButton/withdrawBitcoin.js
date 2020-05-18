@@ -7,7 +7,7 @@ export default async () => {
 
         const amount = getState( 'withdrawZone', 'amount' );
         const address = getState( 'withdrawZone', 'address' );
-        
+
         if( !amount || !address ) {
 
             return;
