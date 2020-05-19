@@ -1,6 +1,6 @@
 {
   "name": "bitcoin-web-app",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "A Bitcoin Web App by Bitcoin-Api.io",
   "main": "src/WebApp/index.js",
   "scripts": {
