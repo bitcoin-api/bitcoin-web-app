@@ -45,6 +45,7 @@ const App = () => {
 ```
 
 ## Example
+Using the installation and setup steps above, the following bitcoin web app is now available within your React app!:
 
 <p float="left">
     <img src="https://bitcoin-api.s3.amazonaws.com/images/demo/web-app/web-app_screenshot_4.png" width="300" />
