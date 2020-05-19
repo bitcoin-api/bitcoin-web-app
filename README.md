@@ -11,6 +11,9 @@ incorporating bitcoin functionality
 into your React web apps.
 
 
+Also, check out [bitcoin-app](https://github.com/bitcoin-api/bitcoin-app), the React Native version of bitcoin-web-app, brought to you by [Bitcoin-Api.io](https://bitcoin-api.io)!🖖
+
+
 ## Table of Contents
 * [Install](#install)
 * [Setup](#setup)
