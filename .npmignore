@@ -22,3 +22,4 @@ tests
 index.html
 dist
 .cache
+src/index.js
